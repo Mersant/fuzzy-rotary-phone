@@ -29,12 +29,7 @@ export const ADD_JOURNAL = gql`
     addJournal(journalText: $journalText) {
       _id
       journalText
-      journalAuthor
-      createdAt
-      journal {
-        _id
-        journalText
-      }
+      journalUser
     }
   }
 `;
