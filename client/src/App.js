@@ -49,23 +49,22 @@ function App() {
             <Routes>
               <Route 
                 path="/" 
-                element={<Home />} 
+                //element={<Home />} 
               />
               <Route 
                 path="/login" 
-                element={<Login />} 
+                //element={<Login />} 
               />
               <Route 
                 path="/signup" 
-                element={<Signup />} 
+                //element={<Signup />} 
               />
               <Route 
                 path="/journal/:journalId" 
-                element={<Journal />} 
+                //element={<Journal />} 
               />
             </Routes>
           </div>
-          <Footer />
         </div>
       </Router>
     </ApolloProvider>
