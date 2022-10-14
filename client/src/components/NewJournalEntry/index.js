@@ -10,7 +10,7 @@ const NewJournalEntry = () => {
 		let details = {
 			message: message.value,
 		};
-		let response = await fetch("/NewJournalEntry", {
+		let response = await fetch("/newJournalEntry", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json;charset=utf-8",
