@@ -7,8 +7,8 @@ import { QUERY_JOURNALS } from '../utils/queries';
 
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_MESSAGES);
-  const messages = data?.messages || [];
+  const { loading, data } = useQuery(QUERY_JOURNALS);
+  const journals = data?.messages || [];
 
 
 
@@ -27,7 +27,6 @@ const Home = () => {
           ) : (
             <Journal
               journals={journals}
-              title=""
             />
           )}
         </div>
