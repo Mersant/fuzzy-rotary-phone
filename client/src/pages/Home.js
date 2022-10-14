@@ -6,12 +6,8 @@ import Journal from '../components/Journal';
 import { QUERY_JOURNALS } from '../utils/queries';
 
 
-const Home = () => {
-  const { loading, data } = useQuery(QUERY_MESSAGES);
-  const messages = data?.messages || [];
-
-
-
+const Home = (props) => {
+  const journal = props.journal;
   return (
     <main>
       <div className="flex-row justify-center">
@@ -22,14 +18,11 @@ const Home = () => {
           <Journal />
         </div>
         <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>POG</div>
-          ) : (
-            <Journal
-              journals={journals}
-              title=""
-            />
-          )}
+
+          <Journal
+            journals={journal}
+          />
+
         </div>
       </div>
     </main>
