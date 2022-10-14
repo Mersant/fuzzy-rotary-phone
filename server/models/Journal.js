@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const { Journal } = require('.');
 const dateFormat = require('../utils/dateFormat');
 
 const journalSchema = new Schema({
