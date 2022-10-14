@@ -6,9 +6,10 @@ const NewJournalEntry = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setStatus("Sending...");
-		const { message } = e.target.elements;
+		const { journalEntryTextArea, journalImageLink } = e.target.elements;
 		let details = {
-			message: message.value,
+			message: journalEntryTextArea.value,
+			image: journalImageLink.value,
 		};
 		let response = await fetch("/newJournalEntry", {
 			method: "POST",
@@ -25,9 +26,13 @@ const NewJournalEntry = () => {
 		<form id='newJournalEntryForm' onSubmit={handleSubmit}>
 			<label htmlFor="message">Inscribe Thy Thoughts:</label>
 			<div>
-				<textarea id='journalEntryTextArea' className="centerBlock" id="message" required />
+				<textarea id='journalEntryTextArea' className="centerBlock" required />
 			</div>
-			<button id="submitJournalButton" type="submit">Commit them Eternally</button>
+			<div>
+        <label htmlFor="image">Bind Them to an Image:</label>
+        <input placeholder="Imgur image link" id="journalImageLink" />
+      </div>
+			<button id="submitJournalButton" type="submit">And Commit them Eternally</button>
 		</form>
 	);
 };
