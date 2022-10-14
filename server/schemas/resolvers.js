@@ -17,7 +17,7 @@ const resolvers = {
     journal: async (parent, { journalId }) => {
       return Journal.findOne({ _id: journalId });
     },
-    dme: async (parent, args, context) => {
+    me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('journal');
       }
