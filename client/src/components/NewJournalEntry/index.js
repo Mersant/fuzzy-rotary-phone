@@ -10,7 +10,7 @@ const NewJournalEntry = () => {
 		let details = {
 			message: message.value,
 		};
-		let response = await fetch("/contact", {
+		let response = await fetch("/NewJournalEntry", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json;charset=utf-8",
@@ -22,12 +22,12 @@ const NewJournalEntry = () => {
 		setStatus(result.status);
 	};
 	return (
-		<form onSubmit={handleSubmit}>
+		<form id='newJournalEntryForm' onSubmit={handleSubmit}>
 			<label htmlFor="message">Inscribe Thy Thoughts:</label>
 			<div>
-				<textarea className="centerBlock" id="message" required />
+				<textarea id='journalEntryTextArea' className="centerBlock" id="message" required />
 			</div>
-			<button id="submitButton" type="submit">Commit them Eternally</button>
+			<button id="submitJournalButton" type="submit">Commit them Eternally</button>
 		</form>
 	);
 };
