@@ -8,24 +8,47 @@ export const QUERY_USER = gql`
       journalHistory {
         _id
         journalText
-        # createdAt
+        createdAt
       }
     }
   }
 `;
 export const QUERY_JOURNALS = gql`
-  query getMessages {
+  query getJournals {
     journals {
       _id
       journalText
-      # createdAt
+      createdAt
     }
   }
 `;
 
 
+export const QUERY_SINGLE_JOURNAL = gql`
+  query getSingleJournal($journalId: ID!) {
+    journal(journalId: $journalId) {
+      _id
+      thoughtText
+      thoughtAuthor
+      createdAt
+    }
+  }
+`;
 
-
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      journal {
+        _id
+        journalText 
+        createdAt
+      }
+    }
+  }
+`;
 
 
 
