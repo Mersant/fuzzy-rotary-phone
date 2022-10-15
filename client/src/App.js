@@ -14,7 +14,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-//import Journal from "./pages/Journal"
+import Profile from './pages/Profile'
+import SingleEntry from './pages/SingleEntry'
+
+import Journal from './components/Journal';
+import AllJournals from './components/AllJournals';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NewJournalEntry from './components/NewJournalEntry';
@@ -50,19 +54,23 @@ function App() {
             <Routes>
               <Route 
                 path="/" 
-                //element={<Home />} 
+                element={<Home />} 
               />
               <Route 
                 path="/login" 
-                //element={<Login />} 
+                element={<Login />} 
               />
               <Route 
                 path="/signup" 
-                //element={<Signup />} 
+                element={<Signup />} 
               />
               <Route 
-                path="/journal/:journalId" 
-                //element={<Journal />} 
+                path="/myJournals" 
+                element={<Profile />} 
+              />
+              <Route
+                path="/journal/:journalId"
+                element = {<SingleEntry/>}
               />
             </Routes>
           </div>

@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 
 import { QUERY_SINGLE_JOURNAL } from '../utils/queries';
 
-const SingleJournal = () => {
+const SingleEntry = () => {
 
   const { journalId } = useParams();
 
@@ -23,6 +23,7 @@ const SingleJournal = () => {
   return (
     <div className="my-3">
       <div className="bg-light py-4">
+      <h2>{journal.createdAt}</h2>  
         <blockquote
           className="p-4"
           style={{
@@ -32,7 +33,9 @@ const SingleJournal = () => {
             lineHeight: '1.5',
           }}
         >
+          <p>
           {journal.journalText}
+          </p>  
         </blockquote>
       </div>
 
@@ -40,4 +43,4 @@ const SingleJournal = () => {
   );
 };
 
-export default SingleJournal;
+export default SingleEntry;

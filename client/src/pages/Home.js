@@ -20,7 +20,6 @@ const Home = (props) => {
           <NewJournalEntry
             journals={journal}
           />
-
         </div>
       </div>
     </main>

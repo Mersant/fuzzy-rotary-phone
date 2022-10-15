@@ -28,8 +28,7 @@ export const QUERY_SINGLE_JOURNAL = gql`
   query getSingleJournal($journalId: ID!) {
     journal(journalId: $journalId) {
       _id
-      thoughtText
-      thoughtAuthor
+      journalText
       createdAt
     }
   }
