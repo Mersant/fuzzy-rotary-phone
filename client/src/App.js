@@ -14,10 +14,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+<<<<<<< HEAD
 import SingleEntry from "./pages/SingleEntry"
 import Header from './components/Header';
 // import Footer from './components/Footer';
 import Profile from './pages/Profile';
+=======
+//import Journal from "./pages/Journal"
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NewJournalEntry from './components/NewJournalEntry';
+
+>>>>>>> 779aee55b10cd1266e580172e30ca272b40d86c6
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -71,6 +79,7 @@ function App() {
           </div>
         </div>
       </Router>
+      <NewJournalEntry />
     </ApolloProvider>
   );
 }
