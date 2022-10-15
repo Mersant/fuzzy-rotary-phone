@@ -39,7 +39,6 @@ const Profile = () => {
           <div className="col-12 col-md-10 mb-5">
             <AllJournals
               journals={user.journal}
-              createdAt={journal.createdAt}
             />
           </div>
         </div>

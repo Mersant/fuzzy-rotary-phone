@@ -22,7 +22,6 @@ const Home = (props) => {
           <Journal
             journals={journal}
           />
-
         </div>
       </div>
     </main>

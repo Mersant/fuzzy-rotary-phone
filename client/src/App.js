@@ -14,10 +14,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Journal from "./pages/Journal"
+import SingleEntry from "./pages/SingleEntry"
 import Header from './components/Header';
-import Footer from './components/Footer';
-
+// import Footer from './components/Footer';
+import Profile from './pages/Profile';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -49,19 +49,23 @@ function App() {
             <Routes>
               <Route 
                 path="/" 
-                //element={<Home />} 
+                element={<Home />} 
               />
               <Route 
                 path="/login" 
-                //element={<Login />} 
+                element={<Login />} 
               />
               <Route 
                 path="/signup" 
-                //element={<Signup />} 
+                element={<Signup />} 
               />
               <Route 
-                path="/journal/:journalId" 
-                //element={<Journal />} 
+                path="/myJournals" 
+                element={<Profile />} 
+              />
+              <Route
+                path="/journal"
+                element = {<SingleEntry/>}
               />
             </Routes>
           </div>
