@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 
 import { QUERY_SINGLE_JOURNAL } from '../utils/queries';
 
-const SingleJournal = () => {
+const SingleEntry = () => {
 
   const { journalId } = useParams();
 
@@ -40,4 +40,4 @@ const SingleJournal = () => {
   );
 };
 
-export default SingleJournal;
+export default SingleEntry;
