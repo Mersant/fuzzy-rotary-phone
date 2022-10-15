@@ -65,3 +65,18 @@
     font-size: 3rem;
     font-family: 'Passions Conflict';
 }
+
+#journalImageLink {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: white;
+
+    margin: 10px;
+
+    font-size: 2rem;
+    background: linear-gradient(to right, #cacaca, #59d0ff 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Passions Conflict';
+}
