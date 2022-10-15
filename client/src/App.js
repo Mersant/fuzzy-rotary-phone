@@ -69,7 +69,7 @@ function App() {
                 element={<Profile />} 
               />
               <Route
-                path="/journal"
+                path="/journal/:journalId"
                 element = {<SingleEntry/>}
               />
             </Routes>
