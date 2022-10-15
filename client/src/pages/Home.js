@@ -1,9 +1,9 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
 
-import Journal from '../components/Journal';
 
-import { QUERY_JOURNALS } from '../utils/queries';
+import Header from '../components/Header';
+
+import NewJournalEntry from '../components/NewJournalEntry';
 
 
 const Home = (props) => {
@@ -15,11 +15,19 @@ const Home = (props) => {
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px solid black' }}
         >
-          <Journal />
+          <Header />
         </div>
         <div className="col-12 col-md-8 mb-3">
 
-          <Journal
+          <Header
+          />
+
+
+          <NewJournalEntry />
+        </div>
+        <div className="col-12 col-md-8 mb-3">
+
+          <NewJournalEntry
             journals={journal}
           />
 
