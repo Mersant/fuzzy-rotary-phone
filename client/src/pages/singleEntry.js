@@ -23,6 +23,7 @@ const SingleEntry = () => {
   return (
     <div className="my-3">
       <div className="bg-light py-4">
+      <h2>{journal.createdAt}</h2>  
         <blockquote
           className="p-4"
           style={{
@@ -32,7 +33,9 @@ const SingleEntry = () => {
             lineHeight: '1.5',
           }}
         >
+          <p>
           {journal.journalText}
+          </p>  
         </blockquote>
       </div>
 
