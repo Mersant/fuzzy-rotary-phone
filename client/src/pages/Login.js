@@ -70,7 +70,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block btn-primary justify-content-center"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >

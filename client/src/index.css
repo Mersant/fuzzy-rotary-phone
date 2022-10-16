@@ -145,7 +145,11 @@ form .form-input {
   align-items: center;
 }
 
-
+.bg-dark.text-white.p-2.text-center {
+  font-size: 5rem;
+  font-family: 'Passions Conflict';
+  
+}
 
 
 
