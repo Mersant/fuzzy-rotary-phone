@@ -25,9 +25,10 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_JOURNAL = gql`
-  mutation addJournal($journalText: String!) {
+  mutation addJournal($journalText: String!,$image:String) {
     addJournal(journalText: $journalText) {
       _id
+      image
       journalText
       createdAt
     }

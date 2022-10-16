@@ -7,29 +7,36 @@ import {QUERY_ME, QUERY_SINGLE_JOURNAL} from '../../utils/queries'
 import Auth from '../../utils/auth'
 
 const NewJournalEntry = () => {
-	const [status, setStatus] = useState("Submit");
-	
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-		setStatus("Sending...");
-		const { journalEntryTextArea, journalImageLink } = e.target.elements;
-		let details = {
-			message: journalEntryTextArea.value,
-			image: journalImageLink.value,
-		};
-		let response = await fetch("/newJournalEntry", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json;charset=utf-8",
-			},
-			body: JSON.stringify(details),
-		});
-		setStatus("Submit");
-		let result = await response.json();
-		setStatus(result.status);
-	};
+
+	const [journalText,setJournalText] = useState('');
+	const [image,setImage] = useState ('')
+
+	const [addJournal,{error}] = useMutation(ADD_JOURNAL,{
+		update(cache,{data:{addJournal}}){
+			const {me} = cache.readQuery({query:QUERY_ME});
+			cache.writeQuery({
+				query:QUERY_ME,
+				data:{me:{...me,journal:[...me.journal,addJournal]}}
+			})
+		}
+	})
+	const handleFormSubmit = async(event) => {
+		event.preventDefault();
+		try {
+			const {data} =await ADD_JOURNAL({
+				variables:{
+					journalText,
+					image,
+				},
+			});
+		}catch(err){
+			console.error(err);
+		}
+	}
 	return (
-		<form id='newJournalEntryForm' onSubmit={handleSubmit}>
+		<div>
+		{Auth.loggedIn() ? (
+		<form id='newJournalEntryForm' onSubmit={handleFormSubmit}>
 			<label htmlFor="message">Inscribe Thy Thoughts:</label>
 			<div>
 				<textarea id='journalEntryTextArea' className="centerBlock" required />
@@ -40,7 +47,14 @@ const NewJournalEntry = () => {
       </div>
 			<button id="submitJournalButton" type="submit">And Commit them Eternally</button>
 		</form>
-	);
+	): ( 
+		<p>
+		You need to be logged in to share your thoughts. Please{' '}
+		<Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+	  </p>
+	)}
+	</div>
+	)
 };
 
 export default NewJournalEntry;
