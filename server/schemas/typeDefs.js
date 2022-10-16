@@ -12,6 +12,7 @@ const typeDefs = gql`
   type Journal {
     _id: ID
     journalText: String
+    image: String
     createdAt: String
   }
 
@@ -32,7 +33,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addJournal(journalText: String!): Journal
+    addJournal(journalText: String!,image:String): Journal
   }
 `;
 

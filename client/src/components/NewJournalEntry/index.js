@@ -8,42 +8,59 @@ import Auth from '../../utils/auth'
 
 const NewJournalEntry = () => {
 
-	const [journalText,setJournalText] = useState('');
-	const [image,setImage] = useState ('')
+	const [journalForm,setJournalForm] = useState({
+		journalText: "",
+		image:"",
+	});
+	
+	const [addJournal,{error,data}] = useMutation(ADD_JOURNAL);
 
-	const [addJournal,{error}] = useMutation(ADD_JOURNAL,{
-		update(cache,{data:{addJournal}}){
-			const {me} = cache.readQuery({query:QUERY_ME});
-			cache.writeQuery({
-				query:QUERY_ME,
-				data:{me:{...me,journal:[...me.journal,addJournal]}}
-			})
-		}
-	})
+	const handleChange = (event) => {
+		const { name, value } = event.target;
+		setJournalForm({
+		  ...journalForm,
+		  [name]: value,
+		});
+	  };
+
 	const handleFormSubmit = async(event) => {
 		event.preventDefault();
 		try {
-			const {data} =await ADD_JOURNAL({
+			const {data} =await addJournal({
 				variables:{
-					journalText,
-					image,
+				...journalForm
 				},
 			});
 		}catch(err){
 			console.error(err);
+			console.log(data);
 		}
 	}
 	return (
 		<div>
 		{Auth.loggedIn() ? (
 		<form id='newJournalEntryForm' onSubmit={handleFormSubmit}>
-			<label htmlFor="message">Inscribe Thy Thoughts:</label>
+			<label htmlFor="message" >Inscribe Thy Thoughts:</label>
 			<div>
-				<textarea id='journalEntryTextArea' className="centerBlock" required />
+				<textarea
+				name = "journalText" 
+				type ="text" 
+				value = {journalForm.journalText}
+				onChange ={handleChange} 
+				id='journalEntryTextArea' 
+				className="centerBlock"
+				required />
 			</div>
 			<div>
         <label htmlFor="image">Bind Them to an Image:</label>
-        <input placeholder="Imgur image link" id="journalImageLink" />
+        <input 
+			name="image"
+			placeholder="Imgur image link" 
+			id="journalImageLink"
+		    type="text"
+		    value = {journalForm.image} 
+		    onChange ={handleChange} 
+		/>
       </div>
 			<button id="submitJournalButton" type="submit">And Commit them Eternally</button>
 		</form>

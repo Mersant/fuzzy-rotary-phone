@@ -9,15 +9,14 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = () => {
-    const {username:userParam} = useParams () ; 
+    const userData  = Auth.getProfile;
 
-    const {loading,data} = useQuery(userParam ? QUERY_USER: QUERY_ME,{
-        variables: {username:userParam},
-    });
+ const {loading, data} = useQuery(QUERY_ME)
+ const user = data?.me || data?.user || {};
     
-    const user =data?.me ||data?.user || {}
-    if(Auth.loggedIn()&&Auth.getProfile().data.username===userParam)
-    {return <Navigate to ="/myJournals"/>}  
+    // if(Auth.loggedIn())
+    // {return <Navigate to ="/myJournals"/>}  //infinitely loops
+    
 
     if(loading){
         return<div>Fetching those journals....</div>;
