@@ -25,7 +25,7 @@ main {
 }
 
 .bg-primary {
-  background-color: blue
+  background-color: rgb(84, 84, 220)
 }
 
 .bg-dark {
@@ -36,6 +36,11 @@ main {
 
 .display-flex {
   display: flex 
+}
+
+#h1.m-0 {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .btn {
@@ -196,3 +201,25 @@ form .form-input {
 .align-center {
   align-items: center;
 }
+
+.m-0 {
+  margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile'
-import SingleEntry from './pages/SingleEntry'
+import SingleEntry from './pages/singleEntry'
 
 import Journal from './components/Journal';
 import AllJournals from './components/AllJournals';
@@ -48,9 +48,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div class="flex-column justify-flex-start min-100-vh">
           <Header />
-          <div className="container">
+          <div class="container">
             <Routes>
               <Route 
                 path="/" 
