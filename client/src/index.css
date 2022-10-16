@@ -130,6 +130,7 @@ form .form-input {
 }
 
 .btn {
+  box-shadow: 2px 2px 5px 3px black;
   background-color: black;
   font-family: 'Passions Conflict';
   font-size: 3rem;
