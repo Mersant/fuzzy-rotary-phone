@@ -70,7 +70,7 @@ function App() {
               />
               <Route
                 path="/journal/:journalId"
-                element = {<NewJournalEntry/>}
+                element = {<SingleEntry/>}
               />
             </Routes>
           </div>

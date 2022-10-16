@@ -9,11 +9,9 @@ const Home = (props) => {
     <main>
       <div class="flex-row justify-center">
         <div
-          class="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px solid black' }}
+          // class="col-12 col-md-10 mb-3 p-3"
+          // style={{ border: '1px solid black' }}
         >
-
-          <NewJournalEntry />
         </div>
         <div className="col-12 col-md-8 mb-3">
 
