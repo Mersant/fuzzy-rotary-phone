@@ -21,11 +21,11 @@ const SingleEntry = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="my-3">
-      <div className="bg-light py-4">
+    <div class="my-3">
+      <div class="bg-light py-4">
       <h2>{journal.createdAt}</h2>  
         <blockquote
-          className="p-4"
+          class="p-4"
           style={{
             fontSize: '1.5rem',
             fontStyle: 'italic',
