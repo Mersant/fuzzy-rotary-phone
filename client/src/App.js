@@ -15,7 +15,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile'
-import SingleEntry from './pages/singleEntry'
+import SingleEntry from './pages/SingleEntry'
 
 import Journal from './components/Journal';
 import AllJournals from './components/AllJournals';
