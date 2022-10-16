@@ -25,7 +25,7 @@ main {
 }
 
 .bg-primary {
-  background-color: rgb(84, 84, 220)
+  background-color: #59d0ff
 }
 
 .bg-dark {
@@ -69,7 +69,7 @@ main {
 }
 
 .bg-primary {
-  background-color: blue
+  background-color: #59d0ff
 }
 
 .bg-dark {
@@ -108,7 +108,7 @@ form .form-input {
   width: 100%;
   padding: 0.75rem;
   color: white;
-  background-color: blue;
+  background-color: #59d0ff;
   margin: 0.625rem 0;
   font-size: 1.2rem;
   border: 3px solid black;
@@ -155,7 +155,7 @@ form .form-input {
   width: 100%;
   padding: 0.75rem;
   color: white;
-  background-color: blue;
+  background-color: #59d0ff;
   margin: 0.625rem 0;
   font-size: 1.2rem;
   border: 3px solid black;

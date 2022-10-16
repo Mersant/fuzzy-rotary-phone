@@ -49,7 +49,7 @@ const NewJournalEntry = () => {
 		</form>
 	): ( 
 		<p>
-		You need to be logged in to share your thoughts. Please{' '}
+		You need to be logged in to view your journal. Please{' '}
 		<Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
 	  </p>
 	)}
