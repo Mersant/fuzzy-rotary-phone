@@ -2,14 +2,16 @@
 
 header {
     background: black;
+    box-shadow: 6px 6px 10px 12px black;
 }
 
 h1 {
+    margin: 20px;
     text-decoration: none;
     color: white;
     font-family: 'Passions Conflict';
     font-weight: 100;
-    font-size: 3rem;
+    font-size: 5rem;
     background: linear-gradient(to right, #cacaca, #59d0ff 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,3 +51,7 @@ a:active { text-decoration: none; }
     -moz-box-shadow: 0px 5px 40px -10px #000000;
     transition: all 0.3s ease 0s;
   }
+
+#headerButtonsContainer {
+    margin-left: 700px;
+}

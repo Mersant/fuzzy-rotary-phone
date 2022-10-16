@@ -19,7 +19,7 @@ return (
           <h1 className="m-0">Letters to Quandale</h1>
         </Link>
       </div>
-      <div class= "">
+      <div id='headerButtonsContainer'>
       {Auth.loggedIn() ? (
             <>
               {/* <span>Hello {Auth.getProfile().data.username}!</span> */}
