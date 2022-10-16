@@ -48,18 +48,24 @@ const resolvers = {
 
       return { token, user };
     },
-    addJournal: async (parent, { journalText }, context) => {
+    addJournal: async (parent, { journalText,image }, context) => {
       if (context.user) {
-        const journal = await Journal.create({
-          journalText
+        const newJournal = await Journal.create({
+          journalText,image
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { journal: journal._id } }
+          {
+             $addToSet: { journal: {journalText,image}}
+          },
+          {
+            new:true,
+            runValidators:true
+          }
         );
 
-        return journal;
+        return newJournal;
       }
       throw new AuthenticationError('You need to be logged in!');
     },

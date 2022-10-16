@@ -10,7 +10,7 @@ const NewJournalEntry = () => {
 
 	const [journalForm,setJournalForm] = useState({
 		journalText: "",
-		image:" ",
+		image:"",
 	});
 	
 	const [addJournal,{error,data}] = useMutation(ADD_JOURNAL);
@@ -33,6 +33,7 @@ const NewJournalEntry = () => {
 			});
 		}catch(err){
 			console.error(err);
+			console.log(data);
 		}
 	}
 	return (
@@ -41,11 +42,25 @@ const NewJournalEntry = () => {
 		<form id='newJournalEntryForm' onSubmit={handleFormSubmit}>
 			<label htmlFor="message" >Inscribe Thy Thoughts:</label>
 			<div>
-				<textarea name = "journalText" type ="text" value = {journalForm.journalText}onChange ={handleChange} id='journalEntryTextArea' className="centerBlock" required />
+				<textarea
+				name = "journalText" 
+				type ="text" 
+				value = {journalForm.journalText}
+				onChange ={handleChange} 
+				id='journalEntryTextArea' 
+				className="centerBlock"
+				required />
 			</div>
 			<div>
         <label htmlFor="image">Bind Them to an Image:</label>
-        <input placeholder="Imgur image link" id="journalImageLink" type="text" value = {journalForm.image} onChange ={handleChange} />
+        <input 
+			name="image"
+			placeholder="Imgur image link" 
+			id="journalImageLink"
+		    type="text"
+		    value = {journalForm.image} 
+		    onChange ={handleChange} 
+		/>
       </div>
 			<button id="submitJournalButton" type="submit">And Commit them Eternally</button>
 		</form>
