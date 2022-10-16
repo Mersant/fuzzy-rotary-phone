@@ -76,7 +76,6 @@ function App() {
           </div>
         </div>
       </Router>
-      <NewJournalEntry />
     </ApolloProvider>
   );
 }
