@@ -8,6 +8,11 @@ const journalSchema = new Schema({
     minlength: 1,
     trim: true,
   },
+  image:{
+    type:String,
+    trim:true,
+    required:false,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
