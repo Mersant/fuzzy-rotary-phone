@@ -13,7 +13,9 @@ const Home = (props) => {
         </div>
         <div className="col-12 col-md-8 mb-3">
 
-          
+        <NewJournalEntry
+        journals={journal}
+        />
         </div>
       </div>
     </main>
