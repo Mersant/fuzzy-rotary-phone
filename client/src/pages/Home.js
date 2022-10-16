@@ -7,7 +7,7 @@ const Home = (props) => {
   const journal = props.journal;
   return (
     <main>
-      <div class="flex-row justify-center">
+      <div className="flex-row justify-center">
         <div
         >
         </div>

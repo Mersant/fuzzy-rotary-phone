@@ -21,8 +21,8 @@ const SingleEntry = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div class="my-3">
-      <div class="bg-light py-4">
+    <div className="my-3">
+      <div className="bg-light py-4">
       <h2>{journal.createdAt}</h2>  
         <blockquote
           class="p-4"
