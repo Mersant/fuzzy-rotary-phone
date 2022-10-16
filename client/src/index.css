@@ -24,36 +24,8 @@ main {
   text-align: justify;
 }
 
-.bg-primary {
-  background-color: #59d0ff
-}
-
-.bg-dark {
-  background-color: #1a1a1a,
-}
-
-
-
 .display-flex {
   display: flex 
-}
-
-.btn {
-  text-align: center;
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  margin: 0;
-  text-decoration: none;
-  font-size: 1rem;
-  border: 1px solid;
-  color: white;
-  background-color: black;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.btn:hover {
-  background-color: white
 }
 
 main {
@@ -68,34 +40,10 @@ main {
   text-align: justify;
 }
 
-.bg-primary {
-  background-color: #59d0ff
-}
-
-.bg-dark {
-  background-color: #1a1a1a,
-}
-
 
 
 .display-flex {
   display: flex 
-}
-
-.btn {
-  text-align: center;
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  margin: 0;
-  text-decoration: none;
-  font-size: 1rem;
-  border: 1px solid;
-  color: white;
-  background-color: black;
-}
-
-.btn:hover {
-  background-color: white
 }
 
 /* form .form-input,
