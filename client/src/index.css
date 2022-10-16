@@ -28,24 +28,6 @@ main {
   display: flex 
 }
 
-main {
-  display: block;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-
-
-.display-flex {
-  display: flex 
-}
-
 /* form .form-input,
 form .form-textarea {
   display: block;
@@ -82,10 +64,6 @@ form .form-input {
   flex-wrap: wrap;
 }
 
-.justify-space-between {
-  justify-content: space-between;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -94,29 +72,8 @@ form .form-input {
   align-items: center;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .justify-space-between {
   justify-content: space-between;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .align-center {
