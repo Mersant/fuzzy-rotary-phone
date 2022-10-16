@@ -8,6 +8,7 @@ export const QUERY_USER = gql`
       journalHistory {
         _id
         journalText
+        image
         createdAt
       }
     }
@@ -18,6 +19,7 @@ export const QUERY_JOURNALS = gql`
     journals {
       _id
       journalText
+      image
       createdAt
     }
   }
@@ -28,6 +30,7 @@ export const QUERY_SINGLE_JOURNAL = gql`
   query getSingleJournal($journalId: ID!) {
     journal(journalId: $journalId) {
       _id
+      image
       journalText
       createdAt
     }
@@ -43,6 +46,7 @@ export const QUERY_ME = gql`
       journal {
         _id
         journalText 
+        image
         createdAt
       }
     }
