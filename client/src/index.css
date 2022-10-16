@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 body {
   background-color: #17191a;
   margin: 0;
@@ -14,6 +19,7 @@ code {
 
 main {
   display: block;
+  animation: fadeIn 0.8s;
 }
 
 .text-center {
@@ -115,6 +121,7 @@ h2 {
   color: white;
   text-shadow: 2px 2px black;
 }
+
 
 
 
