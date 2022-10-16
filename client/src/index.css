@@ -38,10 +38,10 @@ main {
   display: flex 
 }
 
-#h1.m-0 {
+/* #h1.m-0 {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 .btn {
   text-align: center;
