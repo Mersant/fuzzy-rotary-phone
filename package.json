@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "apollo": "^2.34.0",
+  
         "apollo-client": "^2.6.10"
     }
 }
