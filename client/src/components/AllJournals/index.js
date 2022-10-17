@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AllJournals = ({
-    journal
+    journal= []
 })=> {
     if(!journal.length){
         return <h1>No Journals to display!</h1>
