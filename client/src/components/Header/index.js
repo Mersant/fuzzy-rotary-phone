@@ -11,6 +11,7 @@ const Header = () => {
     Auth.logout();
   };
 
+
 return (
   <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
     <div className="container flex-row justify-space-between-lg justify-center align-center">
@@ -23,6 +24,12 @@ return (
       {Auth.loggedIn() ? (
             <>
               {/* <span>Hello {Auth.getProfile().data.username}!</span> */}
+              <Link className="btn btn-lg btn-info m-2 headerButton" to="/">
+               New Entry
+              </Link>
+              <Link className="btn btn-lg btn-info m-2 headerButton" to="/myjournals">
+               My Journals
+              </Link>
               <button class="btn btn-lg btn-light m-2 headerButton" onClick={logout}>
                 Logout
               </button>
@@ -35,9 +42,6 @@ return (
               <Link className="btn btn-lg btn m-2 headerButton" to="/signup">
                 Sign up
               </Link>
-              <Link className="btn btn-lg btn m-2 headerButton" to="/myjournals">
-                My Journals
-              </Link>
             </>
           )}
         </div>
@@ -47,7 +51,6 @@ return (
 };
 
 export default Header;
-
 
 
 
