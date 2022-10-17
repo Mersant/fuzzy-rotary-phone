@@ -64,11 +64,17 @@ const NewJournalEntry = () => {
       </div>
 			<button id="submitJournalButton" type="submit">And Commit them Eternally</button>
 		</form>
+
 	): ( 
 		<p id="loginError">
 		You need to be logged in to view your journal. Please{' '}
 		<Link className="homeLink" to="/login">login</Link> or <Link className="homeLink" to="/signup">signup.</Link>
 	  </p>
+	)}
+	{error && (
+	<div className="my-3 p-3 bg-danger text-white errorMessage">
+		{error.message}
+	</div>
 	)}
 	</div>
 	)
