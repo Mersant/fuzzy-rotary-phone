@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
 body {
   background-color: #17191a;
   margin: 0;
@@ -14,6 +27,7 @@ code {
 
 main {
   display: block;
+  animation: fadeIn 0.8s;
 }
 
 .text-center {
@@ -114,6 +128,12 @@ form .form-input {
 h2 {
   color: white;
   text-shadow: 2px 2px black;
+}
+
+.errorMessage {
+  font-style: oblique;
+  padding: 15px;
+  color: #59d0ff;
 }
 
 
