@@ -35,7 +35,7 @@ return (
               <Link className="btn btn-lg btn m-2 headerButton" to="/signup">
                 Sign up
               </Link>
-              <Link className="btn btn-lg btn m-2 headerButton" to="/profile">
+              <Link className="btn btn-lg btn m-2 headerButton" to="/myjournals">
                 My Journals
               </Link>
             </>
