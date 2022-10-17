@@ -57,7 +57,7 @@ const resolvers = {
         await User.findOneAndUpdate(
           { _id: context.user._id },
           {
-             $addToSet: { journal: {journalText,image}}
+             $addToSet: { journal: newJournal._id}
           },
           {
             new:true,
