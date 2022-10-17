@@ -20,6 +20,7 @@
         "react-scripts": "4.0.1"
     },
     "dependencies": {
-        "apollo": "^2.34.0"
+        "apollo": "^2.34.0",
+        "apollo-client": "^2.6.10"
     }
 }
