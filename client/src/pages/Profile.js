@@ -27,7 +27,7 @@ const Profile = () => {
   }
 
   return (
-    <div>
+    <main>
       <div className="flex-row justify-center mb-3">
         <div className='justify-center'>
           <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5 myJournalsHeader">
@@ -41,7 +41,7 @@ const Profile = () => {
           journals={user.journal}
         />
       </div>
-    </div>
+    </main>
 
   )
 }
