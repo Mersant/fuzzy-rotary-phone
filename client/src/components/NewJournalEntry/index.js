@@ -65,9 +65,9 @@ const NewJournalEntry = () => {
 			<button id="submitJournalButton" type="submit">And Commit them Eternally</button>
 		</form>
 	): ( 
-		<p>
+		<p id="loginError">
 		You need to be logged in to view your journal. Please{' '}
-		<Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+		<Link className="homeLink" to="/login">login</Link> or <Link className="homeLink" to="/signup">signup.</Link>
 	  </p>
 	)}
 	</div>

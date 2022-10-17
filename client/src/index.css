@@ -4,6 +4,14 @@
   100% { opacity: 1; }
 }
 
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
 body {
   background-color: #17191a;
   margin: 0;
@@ -122,6 +130,11 @@ h2 {
   text-shadow: 2px 2px black;
 }
 
+.errorMessage {
+  font-style: oblique;
+  padding: 15px;
+  color: #59d0ff;
+}
 
 
 
