@@ -7,12 +7,9 @@ import Auth from '../utils/auth';
 import '../styles/Profile.css'
 
 const Profile = () => {
-  const userData = Auth.getProfile;
 
-  const { loading, data } = useQuery(QUERY_ME)
-  const user = data?.me || {};
-  // if(Auth.loggedIn())
-  // {return <Navigate to ="/myJournals"/>}  //infinitely loops
+ const {loading, data} = useQuery(QUERY_ME)
+ const user = data?.me  || {};
 
 
   if (loading) {

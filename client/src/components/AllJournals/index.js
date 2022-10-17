@@ -15,8 +15,9 @@ const AllJournals = ({
             className = "text-light"
             to={`/journals/${journal._id}`}
             >
-            Entry from {journal.createdAt}
+                {journal.image}
         </Link>
+            Entry from {journal.createdAt}
         </div>
     ))}
         </div>

@@ -16,7 +16,7 @@ export const QUERY_USER = gql`
 `;
 export const QUERY_JOURNALS = gql`
   query getJournals {
-    journals {
+    journal {
       _id
       journalText
       image
