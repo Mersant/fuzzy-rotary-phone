@@ -6,13 +6,9 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = () => {
-    const userData  = Auth.getProfile;
 
  const {loading, data} = useQuery(QUERY_ME)
  const user = data?.me  || {};
-    // if(Auth.loggedIn())
-    // {return <Navigate to ="/myJournals"/>}  //infinitely loops
-    
 
     if(loading){
         return<div>Fetching those journals....</div>;
