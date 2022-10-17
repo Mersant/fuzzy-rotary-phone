@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 #newJournalEntryForm {
-    background: #17191a;
+    background: #0d0e0f;
+    box-shadow: 6px 6px 10px 12px black;
     padding: 10px;
     border-radius: 20px;
     color: white;
     font-family: 'Ubuntu';
     font-size: 1.5rem;
     width: 80%;
-    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -76,4 +80,18 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Passions Conflict';
+}
+
+#loginError {
+    font-family: 'Passions Conflict';
+    font-size: 3rem;
+    color: white;
+    margin: 30px;
+}
+.homeLink {
+    color: #59d0ff;
+}
+.homeLink:active {
+    color: white;
+    font-weight: 900;
 }
