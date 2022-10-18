@@ -20,7 +20,7 @@ return (
           <h1 className="m-0">Letters to Quandale</h1>
         </Link>
       </div>
-    
+
       <div id='headerButtonsContainer'>
       {Auth.loggedIn() ? (
             <>
@@ -45,14 +45,9 @@ return (
             </>
           )}
         </div>
-        
       </div>
     </header>
  );
 };
 
 export default Header;
-
-
-
-
