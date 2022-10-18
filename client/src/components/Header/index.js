@@ -24,7 +24,6 @@ return (
       <div id='headerButtonsContainer'>
       {Auth.loggedIn() ? (
             <>
-              {/* <span>Hello {Auth.getProfile().data.username}!</span> */}
               <Link className="btn btn-lg btn-info m-2 headerButton" to="/">
                New Entry
               </Link>
