@@ -26,7 +26,7 @@ code {
 }
 
 main {
-
+  display: block;
   animation: fadeIn 0.8s;
 }
 
