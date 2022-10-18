@@ -1,7 +1,7 @@
 # Letters to Quandale
 
 ## Description
-Our app uses the MERN stack to allow users to Signup/Login/Logout, enter a journal entry and associat that entry with a picture, and to later check their profile to reference any of their past entries. 
+Our app uses the MERN stack to allow users to Signup/Login/Logout, enter a journal entry and associate that entry with a picture, and to later check their profile to reference any of their past entries. 
 
 ## Technologies Used
 Our app uses the basic MERN stack, with some styling done in google fonts 
