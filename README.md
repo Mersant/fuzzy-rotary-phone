@@ -9,6 +9,8 @@ Our app uses the basic MERN stack, with some styling done in google fonts
 ## Screenshot 
 ![Application deployed, showing homepage where one can enter their journal](screenshot.png)
 
+![unknown (4)](https://user-images.githubusercontent.com/109694703/196313348-1b297b62-3269-4ba9-a1dc-4eae9de87795.png)
+
 ## Deployment
 Github:https://github.com/Mersant/letters-to-quandale <br>
 Heroku: https://dashboard.heroku.com/apps/todd-howard-simulator
