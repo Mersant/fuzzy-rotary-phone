@@ -9,13 +9,23 @@
     color: white;
     font-family: 'Ubuntu';
     font-size: 1.5rem;
-    width: 80%;
+    width: 30vw;
     margin-top: 80px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
+@media (max-width: 1000px) {
+    #newJournalEntryForm {
+      width: 60vw;
+    }
+  }
+@media (max-width: 500px) {
+    #newJournalEntryForm {
+      width: 70vw;
+    }
+  }
 
 #newJournalEntryForm label {
     font-family: 'Passions Conflict';
