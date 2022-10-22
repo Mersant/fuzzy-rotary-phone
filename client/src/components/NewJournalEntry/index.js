@@ -14,7 +14,6 @@ const NewJournalEntry = () => {
 	});
 
 	const [addJournal, { error, data }] = useMutation(ADD_JOURNAL);
-
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 		setJournalForm({

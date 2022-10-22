@@ -25,7 +25,7 @@ const SingleEntry = () => {
       <div className="bg-light py-4">
       <h2>{journal.createdAt}</h2>  
         <blockquote
-          class="p-4"
+          className="p-4"
           style={{
             fontSize: '1.5rem',
             fontStyle: 'italic',

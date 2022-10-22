@@ -30,7 +30,7 @@ return (
               <Link className="btn btn-lg btn-info m-2 headerButton" to="/myjournals">
                My Journals
               </Link>
-              <button class="btn btn-lg btn-light m-2 headerButton" onClick={logout}>
+              <button className="btn btn-lg btn-light m-2 headerButton" onClick={logout}>
                 Logout
               </button>
             </>
